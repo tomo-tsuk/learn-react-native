@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, FC } from 'react';
 import { NativeSyntheticEvent, NativeTouchEvent, StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -8,7 +8,10 @@ const styles = StyleSheet.create({
   }
 })
 
-const LearnButton = () => {
+type Props = {
+  testID?: string,
+}
+const LearnButton: FC<Props> = ({ testID }) => {
 
   const handlePress: (ev: NativeSyntheticEvent<NativeTouchEvent>) => void = useCallback(() => {
     console.log('Hey');
@@ -33,6 +36,7 @@ const LearnButton = () => {
         shadowRadius: 3,
         shadowOpacity: 0.7,
       }}
+      testID={testID}
     >
       <View
         style={{

@@ -23,10 +23,9 @@ const App: FC = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1 }} testID="top-view" >
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <LearnButton />
-
+          <LearnButton testID="main-button" />
         </View>
       </SafeAreaView>
     </>
